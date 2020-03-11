@@ -35,7 +35,6 @@
 
 
     <script>
-
         var coordenadas = {
             lat: 0,
             lng: 0
@@ -46,30 +45,43 @@
             zoom: 20
         }
 
-        function iniciaMapa() {
-            map = new google.maps.Map(document.getElementById("mapa"), propiedades);
+        function initMap(){
+            map = new google.maps.Map(document.getElementById("map"), propiedades);
+
+            var icono = {
+                url: "https://d1s6fstvea5cci.cloudfront.net/content/themes/vtnz/resources/assets/images/pulse_dot.gif",
+                scaledSize: new google.maps.Size(50, 50),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(0, 0)
+            }
 
             var marker = new google.maps.Marker({
-                position: {lat: 0, lng: 0}
-            }); 
+                position: { lat: 0, lng: 0},
+                icon: icono,
+                scaledSize: new google.maps.Size(50, 50),
+                map: map
+            });
 
-            if(navigator.geolocation){
-                moverPosicion(marker);
+            if(navigator.geolocation)
+            {
+                setInterval(function(){
+                    moverPosicion(marker);
+                }, 3000);
             }
         }
 
-        function moverPosicion(){
-            navigator.geolocation.getCurrentPosition( position => {
+        function moverPosicion(marker){
+            navigator.geolocation.getCurrentPosition(posicion => {
                 var pos = {
-                    lat: position.coordenadas.lat,
-                    lng: position.coordenadas.lng
+                    lat: posicion.coords.latitude,
+                    lng: posicion.coords.longitude
                 }
-            });
-            marker.setPosition(new google.maps.LatLng(position.coordenadas.lat, position.coordenadas.lng));
-            map.panTo(new google.maps.LatLng(position.coordenadas.lat, position.coordenadas.lng));
-            map.setCenter(pos);
-        }
 
+                marker.setPosition(new google.maps.LatLng(pos.lat, pos.lng));
+                map.panTo(new google.maps.LatLng(pos.lat, pos.lng));
+                map.setCenter(pos);
+            });
+        }
     </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
