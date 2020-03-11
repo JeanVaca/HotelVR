@@ -35,53 +35,54 @@
 
 
     <script>
+
         var coordenadas = {
-            lat: 0,
+            lat : 0, 
             lng: 0
         }
-
-        var propiedades = {
-            center: coordenadas,
-            zoom: 20
-        }
-
+         var  propiedades = {
+             center: coordenadas, 
+             zoom: 20
+         }
         function iniciaMapa(){
-            map = new google.maps.Map(document.getElementById("map"), propiedades);
+            map= new google.maps.Map(document.getElementById("mapa"), propiedades)
+            var icono = { 
+                url:"https://icons-for-free.com/download-icon-location+searching+24px-131985217426735227_512.png", 
+                scaledSize: new google.maps.Size(50,50), 
+                origin: google.maps.Point(0,0),
+                anchor: google.maps.Point(0,0)
 
-            var icono = {
-                url: "https://d1s6fstvea5cci.cloudfront.net/content/themes/vtnz/resources/assets/images/pulse_dot.gif",
-                scaledSize: new google.maps.Size(50, 50),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(0, 0)
             }
-
-            var marker = new google.maps.Marker({
-                position: { lat: 0, lng: 0},
-                icon: icono,
-                scaledSize: new google.maps.Size(50, 50),
+            var marker= new google.maps.Marker({
+                position:{
+                    lat: 0, 
+                    lng : 0
+                },
+                icon:icono,
+                scaledSize: new google.maps.Size(50,50), 
                 map: map
             });
-
-            if(navigator.geolocation)
-            {
+            if(navigator.geolocation){
                 setInterval(function(){
-                    moverPosicion(marker);
-                }, 3000);
+                    moverPosicion(marker)
+                },3000)
+                
             }
         }
 
         function moverPosicion(marker){
             navigator.geolocation.getCurrentPosition(posicion => {
-                var pos = {
-                    lat: posicion.coords.latitude,
+                var pos={
+                    lat: posicion.coords.latitude, 
                     lng: posicion.coords.longitude
                 }
-
-                marker.setPosition(new google.maps.LatLng(pos.lat, pos.lng));
-                map.panTo(new google.maps.LatLng(pos.lat, pos.lng));
-                map.setCenter(pos);
+                marker.setPosition(new google.maps.LatLng(posicion.coords.latitude, posicion.coords.longitude))
+                map.panTo(new google.maps.LatLng(posicion.coords.latitude, posicion.coords.longitude))
+                map. setCenter(pos)
             });
+           
         }
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
