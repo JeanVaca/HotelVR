@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fecht1</title>
 </head>
+<style>
+    body {background-color: black;}
+    .bodym {background-color: #222;}
+    h1 {color: white;}
+    #mapa {width: 100%; height: 500px;} 
+    input {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; color: white; background-color: black; border: 1px dashed white; margin-top: .5rem; margin-left: .5rem;}
+</style>
 <body>
 
-    <div id="paises"></div>
+    <input type="submit" name="Submit" value="Volver" onclick="history.go(-1)" />
+
+    <div class="container-fluid ">
+        <div class="container bodym rounded shadow-lg">
+            <div class="row m-5">
+                <div class="col-12 p-5">
+                    <h1 class="text-center ">Casos de Coronavirus</h1>
+                    <div id="paises"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
     <script>
 
         var paises = document.getElementById("paises");
