@@ -26,43 +26,55 @@
     </div>
 
     <script>
-        var coordenadas = {
+
+        var coordinates = {
             lat: 0,
-            lng :0
+            lng: 0
         };
-        var propiedades = {
-            center: coordenadas,
+
+        var properties = {
+            center: coordinates, 
             zoom: 2
         };
 
-        function obtenerMarcadores(){
-            const markers = [{
+        function obtenerMarcadores() {
+            var obj = [
+                {
                     name: "Mexico",
                     longitude: "-99.1276",
                     latitude: "19.427"
-                }, {
+                },
+                {
                     name: "Brazil",
                     longitude: "-47.9292",
-                    latitude: "15.7801"
-                }, {
-                    name: "Mexico",
+                    latitude: "-15.7801"
+                },
+                {
+                    name: "Spain",
                     longitude: "-3.70327",
                     latitude: "40.4167"
-                }]
-                return markers;
-        };
+                },
+            ];
 
-        function iniciaMapa(){
-            const map = new google.maps.Map(document.getElementById("mapa"), propiedades);
+            return obj;
+        }
 
-            for(marcador of marcadores){
+        function iniciaMapa() {
+
+            const map = new google.maps.Map(document.getElementById("map"), properties);
+
+            const markers = obtenerMarcadores();
+
+            markers.map((m) => {
                 let marker = new google.maps.Marker({
-                    map: map,
-                    position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
-                    title: marcador.name
-                });
-            }
-        };
+                    map: map, 
+                    position: new google.maps.LatLng(m.latitude, m.longitude),
+                    title: m.name
+                })
+            });
+
+        }
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
