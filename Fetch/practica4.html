@@ -7,7 +7,9 @@
     <style>
       #map {width: 100%; height: 850px;}
       body {background-color: black;}
-      input {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; color: white; background-color: black; border: 1px dashed white; margin-top: .5rem; margin-left: .5rem; margin-bottom: .5rem;}
+      input {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; color: white; background-color: black; border: 1px dashed white; margin-top: .5rem; margin-left: .5rem; margin-bottom: 1rem;}
+      .gm-style{background-color: black;}
+      div:focus { outline: none; }
     </style>
   </head>
   <body>
@@ -32,6 +34,8 @@
     var propiedades = {
         center: coordenadas,
         zoom: 2,
+        mapTypeControl: false,
+        streetViewControl: false,
         styles: [
                 {
                     "featureType": "all",
