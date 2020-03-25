@@ -70,7 +70,8 @@
                                     let marker = new google.maps.Marker({
                                         map: map,
                                         position: new google.maps.LatLng(marcador.CapitalLatitude, marcador.CapitalLongitude),
-                                        title: marcador.CountryName + registro.cases
+                                        title: marcador.CountryName + registro.cases,
+                                        icon: "http://maps.google.com/mapfiles/kml/pal3/icon39.png"
                                     });
 
                                     marker.addListener('click', function() {
