@@ -15,7 +15,6 @@
     .gm-style{background-color: black;}
     div:focus { outline: none; }
     .btn{color: white; background-color: #515151;}
-    .mrbb{padding-bottom: 1rem;}
     </style>
 
 </head>
@@ -30,7 +29,7 @@
                     <div id="mapa"></div>
                 </div>
             </div>
-            <div class="row text-center p-2 mrbb">
+            <div class="row text-center p-2">
                 <div class="col-3">
                     <button class="btn" id="btnroadmap">Roadmap</button>
                 </div>
@@ -89,7 +88,9 @@
                 {
                     center: coordenadas,
                     zoom: 3,
-                    mapTypeId: 'terrain'
+                    mapTypeId: 'terrain',
+                    mapTypeControl: false,
+                    streetViewControl: false
                 }
             );
 
