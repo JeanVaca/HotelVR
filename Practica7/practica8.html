@@ -11,6 +11,7 @@
         #mapa {width: 100%; height: 640px;} 
         .bodym {background-color: #222;}
         h1{color: white;}
+        .pad{padding-top: 0rem; padding-left: 2rem; padding-right: 2rem; padding-bottom: 2rem;}
         .selecter{background-color: #222; color: white;}
         .selecter:active{background-color: #222; color: white;}
         input {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; color: white; background-color: black; border: 1px dashed white; margin-top: .5rem; margin-left: .5rem; margin-bottom: 1rem;}
@@ -26,7 +27,7 @@
     <div class="container-fluid">
         <div class="container bodym rounded shadow-lg">
             <h1 class="text-center">Selecciona un idioma:</h1>
-            <div class="row justify-content-center m-5">
+            <div class="row justify-content-center pad">
                     <div class="col-6">
                         <select id="idioma" name="idioma" class="form-control selecter" onchange="this.form.submit()">
                             <option value="en">Inglés</option>
@@ -39,7 +40,7 @@
                     </div>
             </div>
             <div class="row">
-                <div class="col-12 p-5">
+                <div class="col-12 pad">
                     <div id="mapa"></div>
                 </div>
             </div>
