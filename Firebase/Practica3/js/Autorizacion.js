@@ -84,7 +84,7 @@ formaregistrar.addEventListener('submit', (e)=>{
 
 entrarGoogle = () =>{
     var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider),then(function(result){
+    firebase.auth().signInWithPopup(provider).then(function(result){
         var token = result.credential.accessToken;
         console.log(token);
         var user = result.user;
