@@ -168,12 +168,10 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row text-center" id="listaproductos"></div>
-    </div>
-
-    <div class="container logged-in">
-        <div class="row text-center" id="map"></div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row" id="map"></div>
+        </div>
     </div>
     
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -198,25 +196,11 @@
 
     const auth = firebase.auth();
     const db = firebase.firestore();
-
-    function iniciaMapa() {
-        var propiedades = {
-            center: {lat: 19.420847, lng: -102.062763},
-            zoom: 14, 
-            streetViewControl: false,
-            fullscreenControl: false,
-            zoomControl: false
-        }    
-
-        var mapa = document.getElementById("map");
-        var map = new google.maps.Map(mapa,propiedades);
-    }
 </script>
 
 <script src="js/Autorizacion.js"></script>
 <script src="js/Index.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy0EdEH8sbCa5Or0rzkyD-C9Kww_0iB70&callback=iniciaMapa" async defer></script>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADjOfdGIg-7JiqjoTstMN9el4g-nLhxxA" async defer></script>
 
 </body>
 </html>
