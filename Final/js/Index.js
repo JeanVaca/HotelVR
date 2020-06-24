@@ -27,22 +27,7 @@ const listaproductos = document.getElementById('listaproductos');
 
 const obtenerProductos = (data) => {
     if(data.length){
-        let html = '';
-        data.forEach(doc =>{
-            const producto = doc.data();
-            const columna = `
-            <div class="col-12 col-md-3"> 
-                <img src="img/${producto.imagen}" alt="${producto.nombre}"> 
-                <p>${producto.nombre}</p> 
-                <p class="text-danger">$${producto.precio}</p> 
-                <a href="https://www.paypal.me/grupohernandezalba/${producto.precio}" target="_blank">
-                    <button class="btn btn-primary">Pagar Ahora</button>
-                </a>
-            </div>
-            `;
-
-            html += columna;
-        });
+        const html = `<button type="button" style="margin-top: 5rem; margin-left: 45rem;" class="btn btn-light">Ver Productos</button>`;
         listaproductos.innerHTML = html;
     }else{
         listaproductos.innerHTML = `<p class="text-center">Ingresa con tu cuenta para poder ver nuestros productos</p>`
