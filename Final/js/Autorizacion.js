@@ -24,12 +24,16 @@ formaingresar.addEventListener('submit', (e)=>{
         $('#ingresarmodal').modal('hide');
         formaingresar.reset();
         formaingresar.querySelector('.error').innerHTML='';
-
+        red();
     }).catch(err =>{
         formaingresar.querySelector('.error').innerHTML=mensajeError(err.code);
         console.log (err)
     });
 });
+
+function red() {
+  location.replace("https://jeanvaca.github.io/SistemasGeo/")
+}
 
 function mensajeError(codigo){
     let mensaje = '';
