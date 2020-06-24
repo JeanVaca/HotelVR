@@ -22,9 +22,10 @@ formaingresar.addEventListener('submit', (e)=>{
         console.log (cred);
 
         $('#ingresarmodal').modal('hide');
+        window.location.replace(menu.html);
         formaingresar.reset();
         formaingresar.querySelector('.error').innerHTML='';
-        location.replace("https://jeanvaca.github.io/SistemasGeo/")
+        
     }).catch(err =>{
         formaingresar.querySelector('.error').innerHTML=mensajeError(err.code);
         console.log (err)
