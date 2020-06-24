@@ -22,8 +22,6 @@ formaingresar.addEventListener('submit', (e)=>{
         console.log (cred);
 
         $('#ingresarmodal').modal('hide');
-        location.replace("https://jeanvaca.github.io/SistemasGeo/Final/main.html")
-        window.location.replace(main.html);
         formaingresar.reset();
         formaingresar.querySelector('.error').innerHTML='';
         
