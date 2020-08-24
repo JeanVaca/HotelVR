@@ -23,7 +23,6 @@
         <div class="container bodym rounded shadow-lg">
             <div class="row m-5">
                 <div class="col-12 p-5">
-                    <h1 class="text-center ">Google Maps con Bootstrap</h1>
                     <div id="mapa"></div>
                 </div>
             </div>
@@ -34,13 +33,13 @@
     <script>
     function iniciaMapa() {
         var locations = [
-            ['Cronulla Beach', 21.157296, -101.700506, 3],
-            ['Manly Beach', 21.154401, -101.712494, 2],
-            ['Maroubra Beach', 21.157296, -101.700506, 1]
+            ['Centro comercial Plaza Mayor', 21.157799, -101.695375, 3],
+            ['Parque de Innovacion de LaSalle', 21.154401, -101.712494, 2],
+            ['Hospital Angeles', 21.157296, -101.700506, 1]
             ];
 
             var map = new google.maps.Map(document.getElementById('mapa'), {
-            zoom: 10,
+            zoom: 15,
             center: new google.maps.LatLng(21.152639, -101.711598),
             mapTypeId: google.maps.MapTypeId.ROADMAP
             });
@@ -52,6 +51,7 @@
             for (i = 0; i < locations.length; i++) {  
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                icon: "http://maps.google.com/mapfiles/kml/pal3/icon39.png",
                 map: map
             });
 
