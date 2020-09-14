@@ -62,7 +62,7 @@
             L.marker([latLng.lat,latLng.lng]).addTo(mymap)
 
             arreglo.push(latLng);
-            if(arreglo.length >= 10){
+            if(arreglo.length >= 11){
                 var poligono = L.polygon(arreglo).addTo(mymap);
                 var poligono = L.polygon(arreglo).addTo(map);
                 const random3 = Math.floor(Math.random() * tilesProvider.length);
