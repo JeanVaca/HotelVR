@@ -1,25 +1,8 @@
 var mapboxAccessToken = 'pk.eyJ1IjoiamVhbnZhY2ExOTk2IiwiYSI6ImNrZXdtYWVxNTBiNmQyc2szcWJsZ2s3cXkifQ.GpC3IyP3dgvsxAE_sluttw';
 var map = L.map('map').setView([37.8, -96], 4);
-
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
-    id: 'mapbox/light-v9',
-    attribution: "",
-    tileSize: 512,
-    zoomOffset: -1
-}).addTo(map);
-
+var geojson;
 var info = L.control();
-info.onAdd = function (map) {
-    this._div = L.DomUtil.create('div', 'info'); 
-    this.update();
-    return this._div;
-};
-info.update = function (props) {
-    this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
-        : 'Hover over a state');
-};
-info.addTo(map);
+var legend = L.control({position: 'bottomright'});
 
 function getColor(d) {
     return  d > 1000 ? '#141e2f' :
@@ -44,7 +27,8 @@ function style(feature) {
 }
 
 function highlightFeature(e) {
-    var layer = e.target;
+    let layer = e.target;
+
     layer.setStyle({
         weight: 5,
         color: '#666',
@@ -56,8 +40,6 @@ function highlightFeature(e) {
     }
     info.update(layer.feature.properties);
 }
-
-var geojson;
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
@@ -76,19 +58,32 @@ function onEachFeature(feature, layer) {
     });
 }
 
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
+    id: 'mapbox/light-v9',
+    maxZoom: 18,
+    attribution: "",
+    tileSize: 512,
+    zoomOffset: -1
+}).addTo(map);
+
 geojson = L.geoJson(statesData, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
 
-function highlightFeature(e) {
-    info.update(layer.feature.properties);
-}
-function resetHighlight(e) {
-    info.update();
-}
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info'); 
+    this.update();
+    return this._div;
+};
 
-var legend = L.control({position: 'bottomright'});
+info.update = function (props) {
+    this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
+        '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+        : 'Hover over a state');
+};
+info.addTo(map);
+
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend'),
         grades = [0, 10, 20, 50, 100, 200, 500, 1000],
