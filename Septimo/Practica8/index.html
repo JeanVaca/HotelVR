@@ -25,7 +25,7 @@
             <div class="row m-5">
                 <div class="col-12 p-5">
                     <div id="mapid"></div>
-                    <button class="button" onclick="restablecerMapa()">Restablecer</button>
+                    <button class="button" onclick="go()">Restablecer</button>
                 </div>
             </div>
         </div>
@@ -74,10 +74,8 @@
         }
         mymap.on("click", onMapClick);
 
-        function restablecerMapa(e){
-            mymap.removeLayer(markerGroup);
-
-            contador = 1;
+        function go() {
+          location.replace("https://jeanvaca.github.io/SistemasGeo/Septimo/Practica8/index.html")
         }
     </script>
 
