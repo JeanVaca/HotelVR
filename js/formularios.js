@@ -1,7 +1,7 @@
 import {saveTask} from './firebase.js'
 
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('works');
+    console.log('funciona');
 })
 
 const taskForm = document.getElementById('task-form')
@@ -15,6 +15,7 @@ taskForm.addEventListener('submit', (e) => {
     const school = taskForm['school']
     const experience = taskForm['experience']
     const location = taskForm['location']
+    const able = taskForm['able']
 
-    saveTask(name.value, phone.value, email.value, school.value, experience.value, location.value)
+    saveTask(name.value, phone.value, email.value, school.value, experience.value, location.value, able.value)
 })
