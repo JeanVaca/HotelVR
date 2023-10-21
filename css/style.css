@@ -242,6 +242,7 @@ ol {
 }
 
 .spacial-controls .search-switch {
+	opacity: 0%;
 	display: block;
 	height: 100%;
 	padding-top: 30px;
