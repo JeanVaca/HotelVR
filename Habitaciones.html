@@ -181,13 +181,13 @@
         transform: translate(-50%, -50%);
         }
         h1{
-            font-size: x-large;
+            font-size: large;
             padding-bottom: 1rem;
         }
         .extrawidth{
             width: 200%;
             position: relative;
-            right: 18rem;
+            right: 13rem;
         }
         .withebtn{
             background-color: transparent;
@@ -213,7 +213,7 @@
         }
         .captionl{
             position: fixed;
-            padding-right: 2rem;
+            padding-right: 1rem;
         }
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
@@ -237,7 +237,7 @@
                         <img src="images/logos/LogoColorSoloIcono_Desktop.png" alt="">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"href="index.html">INICIO</a>
+                        <a class="nav-link"href="Index.html">INICIO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Nosotros.html">SOBRE NOSOTROS</a>
@@ -265,8 +265,8 @@
             <button class="styledbutton" style="color: black; background-color: white; border-color: black;">ENG</button>
         </div>
                 <div class="social">
-                    <a href="https://www.facebook.com/vistalaribera"><button class="socialButtonsNavbar"><img src="images/logos/f.png" alt=""></button></a>
-                    <a href="https://www.instagram.com/vistalaribera/"><button class="socialButtonsNavbar"><img src="images/logos/i.png" alt=""></button></a>
+                    <button class="socialButtons"><img src="images/logos/fw.png" alt="" onclick="facebook()"></button>
+                    <button class="socialButtons"><img src="images/logos/iw.png" alt="" onclick="instagram()"></button>
                 </div>
             </div>
         </div>
@@ -294,7 +294,7 @@
                         <div class="col"> 
                             <button class="withebtn"><img src="images/logos/next.png" alt="" onclick=""></button>
                         </div>
-                    </div>
+                    </div><br>
                     <div class="row">
                         <div class="col">
                             <figure>
@@ -305,13 +305,13 @@
                         <div class="col">
                             <figure>
                             <img class="caracteristica mg-r" src="images/logos/Iconos/sencilla matrimonial.png" alt="">
-                            <figcaption class="captionl">1 Cama King Size</figcaption>
+                            <figcaption class="captionl">1 Cama <br>King Size</figcaption>
                             </figure>
                         </div>
                         <div class="col">
                             <figure>
                             <img class="caracteristica mg-r" src="images/logos/Iconos/bano.png" alt="">
-                            <figcaption class="captionl">1 Bano Completo</figcaption>
+                            <figcaption class="captionl">1 Bano <br>Completo</figcaption>
                             </figure>
                         </div>
                         <div class="col">
@@ -325,7 +325,7 @@
                         <div class="col">
                             <figure>
                                 <img class="caracteristica mg-r" src="images/logos/Iconos/aire acondicionado.png" alt="">
-                                <figcaption class="captionl">Aire Acondicionado</figcaption>
+                                <figcaption class="captionl">Aire <br>Acondicionado</figcaption>
                             </figure>
                         </div>
                         <div class="col">
@@ -364,8 +364,8 @@
             <button class="styledbutton">ENG</button>
         </div>
         <div class="social">
-            <a href="https://www.facebook.com/vistalaribera"><button class="socialButtonsNavbar"><img src="images/logos/f.png" alt=""></button></a>
-            <a href="https://www.instagram.com/vistalaribera/"><button class="socialButtonsNavbar"><img src="images/logos/i.png" alt=""></button></a>
+            <button class="socialButtons"><img src="images/logos/fw.png" alt="" onclick="facebook()"></button>
+            <button class="socialButtons"><img src="images/logos/iw.png" alt="" onclick="instagram()"></button>
         </div>
     </div>
 
@@ -381,23 +381,14 @@
     -->
 
     <script>
-        function prevFunct() {
-        if (document.getElementById("habit").innerHTML = "STANDAR SENCILLA")
-        {
-            document.getElementById("habit").innerHTML = "JUNIOR SUITE DOBLE";
+        function instagram(){
+        window.open('https://www.instagram.com/vistalaribera/');
         }
-        if(document.getElementById("habit").innerHTML = "STANDAR DOBLE"){
-            document.getElementById("habit").innerHTML = "STANDAR SENCILLA";
+        function facebook(){
+        window.open('https://www.facebook.com/vistalaribera/');
         }
-        if(document.getElementById("habit").innerHTML = "JUNIOR SUITE SENCILLA"){
-            document.getElementById("habit").innerHTML = "STANDAR DOBLE";
-        }
-        if(document.getElementById("habit").innerHTML = "JUNIOR SUITE DOBLE"){
-            document.getElementById("habit").innerHTML = "JUNIOR SUITE SENCILLA";
-        }
-        }
-        function nextFunct() {
-        document.getElementById("habit").innerHTML = "Next";
+        function resevar(){
+        window.open('https://hotels.cloudbeds.com/es/reservation/gv21lh?currency=mxn&utm_source=google&utm_medium=fbl&utm_campaign=cloudbeds&utm_term=3525131-gh3-92&checkin=2024-09-14&checkout=2024-09-15&adults=2&kids=0&rid=342053');
         }
     </script>
   </body>

@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logos/LogoColorSoloIcono_Desktop.png" type="image/x-icon"/>
-    <title>Restaurante</title>
+    <title>Hotel Vista la Ribera</title>
     
     <style>   
         .hero-section {
@@ -44,7 +44,7 @@
         .navbar-toggler{
             color: black;
             font-size: 1.5em;
-            border-color: black;
+            border-color: #fff;
             border-width: 3px;
             border-radius: 15px 15px 15px 15px;
         }
@@ -70,7 +70,7 @@
         transition: all 1s;
         }
         .navbar-toggler-icon{
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='10 -7 40 52'%3e%3cpath stroke='rgba%280, 0, 0%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='10 -7 40 52'%3e%3cpath stroke='rgba%28255, 255, 255%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
         .txtMenu{
             margin-top: 1px;
@@ -78,22 +78,9 @@
             position:absolute;
             top:1.3rem;
             right:1.2rem;
-            color: black;
-        }
-        .coverNavbar{
-            z-index: 1;
-            margin-top: 1px;
-            margin-right: 2px;
-            position:absolute;
-            top:0;
-            right:0;
-            background-color: white;
-            border: white;
-            width: 200px;
-            height: 100px;
+            color: #FFF;
         }
         .btnClose{
-            z-index: 2;
             margin-top: 1px;
             margin-right: 2px;
             position:absolute;
@@ -126,8 +113,28 @@
             background-color: transparent;
             border: none;
         }
+
         html, body {
             font-family: "Maven Pro", sans-serif;
+            overflow-y: hidden; 
+            overflow-x: hidden; 
+        }
+        .carousel {
+            bottom: 7rem;
+        }
+        .carousel-indicators {
+            padding-bottom: 30px;
+            height: 10px;
+        }
+        .indicatorRounded {
+            
+            border-radius: 100%;
+        }
+        .indicatorRounded:active{
+            opacity: 0%;
+        }
+        .il:hover {
+            color: white;
         }
         .logo{
         height: 100vh;
@@ -151,64 +158,16 @@
             padding: .5rem;
             font-size: large;
             font-weight:bold;
-            color: black;
-            border-color: black;
+            color: #FFF;
+            border-color: white;
             border: solid;
             background-color: transparent;
             border-radius: 15px 15px 15px 15px;
         }
         .styledbutton:hover{
-            background-color: black;
-            color: #FFF;
+            background-color: #FFF;
+            color: black;
             border-color: transparent;
-        }
-        .imgNos{
-            height: 100vh;
-        }
-        .center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        } 
-        .containerCentered {
-            position: relative;
-            text-align: center;
-        }
-        .child {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        }
-        h1{
-            font-size: large;
-            padding-bottom: 1rem;
-        }
-        h2{
-            font-size: 3em;
-        }
-        
-        .caracteristica{
-            width: 50px;
-            height: 50px;
-        }
-        .mg-r{
-            margin-right: 2rem;
-        }
-        h3{
-            font-size: small;
-        }
-        .captionr{
-            position: fixed;
-            padding-left: 3.5rem;
-        }
-        .captionxr{
-            position: fixed;
-            padding-left: 2.5rem;
-        }
-        .captionl{
-            position: fixed;
-            padding-right: 2rem;
         }
 
         @media screen and (min-width: 768px) {
@@ -233,7 +192,7 @@
                         <img src="images/logos/LogoColorSoloIcono_Desktop.png" alt="">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"href="Index.html">INICIO</a>
+                        <a class="nav-link active" aria-current="page" href="#">INICIO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Nosotros.html">SOBRE NOSOTROS</a>
@@ -248,13 +207,12 @@
                         <a class="nav-link" href="Amenidades.html">AMENIDADES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">RESTAURANTE</a>
+                        <a class="nav-link" href="Restaurante.html">RESTAURANTE</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Contacto.html">CONTACTO</a>
                     </li>
                 </ul>
-                <div class="coverNavbar"></div>
                 <button data-bs-toggle="collapse" data-bs-target="#navbarNav" class="btnClose"><img src="images/logos/x.png" alt=""></button>
                 <div class="idiom">
             <button class="styledbutton" style="color: #FFF; background-color: black; border-color: transparent;">ESP</button>
@@ -269,58 +227,63 @@
     </nav>
 
     <div class="hero-section">
-        <div class="container-fluid"></div>
-            <div class="row">
-              <div class="center col">
-                    <img class="imgNos" src="images/fotosD/DesktopRestaurante_01.png" alt="">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="" >
+              <ol class="carousel-indicators">
+                <il type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active indicatorRounded" aria-current="true" aria-label="Slide 1" style="width: 10px; height: 10px; background-color: transparent; border-style: solid; border-width: 3px; border-color: white; margin-left: 8px; margin-right: 8px;"></il>
+                <il type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="indicatorRounded" aria-label="Slide 2" style="width: 10px; height: 10px; background-color: transparent; border-style: solid; border-width: 3px; border-color: white; margin-left: 8px; margin-right: 8px;"></il>
+                <il type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="indicatorRounded" aria-label="Slide 3" style="width: 10px; height: 10px; background-color: transparent; border-style: solid; border-width: 3px; border-color: white; margin-left: 8px; margin-right: 8px;"></il>
+                <il type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="indicatorRounded" aria-label="Slide 4" style="width: 10px; height: 10px; background-color: transparent; border-style: solid; border-width: 3px; border-color: white; margin-left: 8px; margin-right: 8px;"></il>
+                </ol>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/fotosD/DesktopHome_01.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
               </div>
-              <div class="containerCentered col">
-                <div class="child">
-                    <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="">
-                    <h1>
-                        Conoce la gran variedad de platillos que nuestros chefs<br>preparan día con día, tenemos comidas y cenas para<br>todos los gustos, mariscos súper frescos y mixología.<br><br>
-                        <b>!Pregunta por nuestro menú de temporada!</b><br>
-                    </h1>
-                    <div class="row">
-                        <div class="col">
-                            <figure>
-                                <img class="caracteristica mg-r" src="images/logos/Iconos/comida.png" alt="">
-                                <figcaption class="captionr">Comida</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col">
-                            <figure>
-                            <img class="caracteristica mg-r" src="images/logos/Iconos/cena.png" alt="">
-                            <figcaption class="captionr">Cena</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col">
-                            <figure>
-                            <img class="caracteristica mg-r" src="images/logos/Iconos/cocteles.png" alt="">
-                            <figcaption class="captionxr">Mixologia</figcaption>
-                            </figure>
-                        </div>
-                    </div><br> 
-                    <h1><b>ABIERTO DE LUNES A DOMINGO</b><br></h1>
-                    <h2><b>12:00 PM - 9:30 PM</b></h2> 
-                    <div>
-                        <button class="styledbutton">DESCARGAR MENÚ</button>
-                    </div>
+              <div class="carousel-item">
+                <img src="images/fotosD/DesktopHome_02.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/fotosD/DesktopHome_03.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/fotosD/DesktopHome_04.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
                 </div>
               </div>
             </div>
-        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
 
         <div class="txtMenu">
             <h4>MENÚ</h4>
         </div>
         <div class="idiom">
-            <button class="styledbutton" style="color: #FFF; background-color: black; border-color: transparent;">ESP</button>
+            <button class="styledbutton" style="color: black; background-color: #FFF; border-color: transparent;">ESP</button>
             <button class="styledbutton">ENG</button>
         </div>
         <div class="social">
             <button class="socialButtons"><img src="images/logos/fw.png" alt="" onclick="facebook()"></button>
             <button class="socialButtons"><img src="images/logos/iw.png" alt="" onclick="instagram()"></button>
+        </div>
+        <div class="logo">
+            <img src="images/logos/LogoBlancoCompleto_Desktop.png" alt="">
+        </div>
+        <div class="btnReservar">
+            <button class="styledbutton" onclick="resevar()">RESERVAR AHORA</button>
         </div>
     </div>
 
