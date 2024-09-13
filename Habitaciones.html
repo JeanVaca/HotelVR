@@ -11,7 +11,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link rel="icon" href="images/logos/LogoColorSoloIcono_Desktop.png" type="image/x-icon"/>
     <title>Habitaciones</title>
     
@@ -127,7 +128,7 @@
             border: none;
         }
         html, body {
-            font-family: "Maven Pro", sans-serif;
+            font-family: "Kanit", sans-serif;        
         }
         .logo{
         height: 100vh;
@@ -183,6 +184,12 @@
         h1{
             font-size: large;
             padding-bottom: 1rem;
+        }
+        .tit{
+            font-size: x-large;
+        }
+        .desc{
+            font-weight: 200;
         }
         .extrawidth{
             width: 200%;
@@ -281,7 +288,7 @@
               <div class="containerCentered col">
                 <div class="child">
                     <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="">
-                    <h1>
+                    <h1 class="desc">
                         Todas nuestras habitaciones cuentan con el espacio y<br>caracteristicas para hacer de tu visita la mas<br>comoda y agradable.<br><br>
                     </h1>
                     <div class="row extrawidth">
@@ -289,7 +296,7 @@
                             <button class="withebtn"><img src="images/logos/back.png" alt="" onclick=""></button>
                         </div>
                         <div class="col">                        
-                        <h1><b id="habit">STANDAR SENCILLA</b></h1>
+                        <h1 class="tit"><b id="habit">STANDAR SENCILLA</b></h1>
                         </div>
                         <div class="col"> 
                             <button class="withebtn"><img src="images/logos/next.png" alt="" onclick=""></button>

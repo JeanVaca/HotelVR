@@ -11,7 +11,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link rel="icon" href="images/logos/LogoColorSoloIcono_Desktop.png" type="image/x-icon"/>
     <title>Restaurante</title>
     
@@ -210,6 +211,12 @@
             position: fixed;
             padding-right: 2rem;
         }
+        .tit{
+            font-size: 18px;
+        }
+        .desc{
+            font-weight: 200;
+        }
 
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
@@ -277,8 +284,10 @@
               <div class="containerCentered col">
                 <div class="child">
                     <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="">
-                    <h1>
+                    <h1 class="desc">
                         Conoce la gran variedad de platillos que nuestros chefs<br>preparan día con día, tenemos comidas y cenas para<br>todos los gustos, mariscos súper frescos y mixología.<br><br>
+                    </h1>
+                    <h1 class="tit">
                         <b>!Pregunta por nuestro menú de temporada!</b><br>
                     </h1>
                     <div class="row">
@@ -301,7 +310,7 @@
                             </figure>
                         </div>
                     </div><br> 
-                    <h1><b>ABIERTO DE LUNES A DOMINGO</b><br></h1>
+                    <h1 class="tit"><b>ABIERTO DE LUNES A DOMINGO</b><br></h1>
                     <h2><b>12:00 PM - 9:30 PM</b></h2> 
                     <div>
                         <button class="styledbutton">DESCARGAR MENÚ</button>
