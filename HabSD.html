@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="icon" href="images/logos/LogoColorSoloIcono_Desktop.png" type="image/x-icon"/>
-    <title>Sobre Nosotros</title>
+    <title>Habitaciones</title>
     
     <style>   
         .hero-section {
@@ -214,13 +214,36 @@
             color: #FFF;
             border-color: transparent;
         }
-        
+        .styledbuttonHAB{
+            width: 100%;
+            padding: .5rem;
+            font-size: large;
+            font-weight:bold;
+            color: black;
+            border-color: black;
+            border: solid;
+            background-color: transparent;
+            border-radius: 15px 15px 15px 15px;
+        }
+        .styledbuttonHAB:hover{
+            background-color: black;
+            color: #FFF;
+            border-color: transparent;
+        }
+        .activo{
+            background-color: black;
+            color: white;
+            border-color: black;
+        }
         .imgNos{
             height: 100vh;
         }
         .center {
         text-align: left;
         } 
+        .mgbtn{
+            padding: .7rem 1rem .7rem 1rem;
+        }
         .containerCentered {
             position: relative;
             text-align: center;
@@ -236,15 +259,46 @@
             padding-bottom: 1rem;
         }
         .tit{
-            font-size: 18px;
+            font-size: x-large;
         }
         .desc{
             font-weight: 200;
         }
-        .mgbtn{
-            padding: .7rem 1rem .7rem 1rem;
+        .extrawidth{
+            width: 200%;
+            position: relative;
+            right: 13rem;
         }
-
+        .withebtn{
+            background-color: transparent;
+            border: none;
+        }
+        .caracteristica{
+            width: 50px;
+            height: 65px;
+        }
+        .caracteristicaw{
+            width: 80px;
+            height: 65px;
+        }
+        .mg-r{
+            margin-right: 1rem;
+        }
+        h3{
+            font-size: small;
+        }
+        .captionr{
+            position: fixed;
+            padding-left: 2rem;
+        }
+        .captionxr{
+            position: fixed;
+            padding-left: 1rem;
+        }
+        .captionl{
+            position: fixed;
+            padding-right: 1rem;
+        }
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
             padding: 0.5em 8em;
@@ -270,13 +324,13 @@
                         <a class="nav-link" href="index.html">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">SOBRE NOSOTROS</a>
+                        <a class="nav-link " href="Nosotros.html">SOBRE NOSOTROS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="Actividades.html">ACTIVIDADES CERCANAS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="HabSS.html">HABITACIONES</a>
+                        <a class="nav-link active" aria-current="page" href="#">HABITACIONES</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Amenidades.html">AMENIDADES</a>
@@ -292,7 +346,7 @@
                 <button data-bs-toggle="collapse" data-bs-target="#navbarNav" class="btnClose"><h4><img src="images/logos/x.png" alt=""> CERRAR</h4></button>
                 <div class="idiom">
             <button class="styledbuttonNav" style="color: white; background-color: black; border-color: black;">ESP</button>
-            <a href="AboutUs.html"><button class="styledbuttonNav">ENG</button></a>
+            <a href="RoomSD.html"><button class="styledbuttonNav">ENG</button></a>
         </div>
                 <div class="social">
                     <button class="socialButtonsNavbar"><img src="images/logos/fb normal2.png" alt="" onclick="facebook()"></button>
@@ -303,19 +357,80 @@
     </nav>
 
     <div class="hero-section">
-        <div class="container-fluid">
+        <div class="container-fluid"></div>
             <div class="row">
               <div class="center col">
-                <img class="imgNos" src="images/fotosD/DesktopNosotros.png" alt="">
+                <img class="imgNos" src="images/fotosD/estandar doble fusion.png" alt="">
               </div>
               <div class="containerCentered col">
                 <div class="child">
                     <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="">
                     <h1 class="desc">
-                        Este mágico lugar nació como un proyecto familiar, un lindo rincón entre las colinas con nuestra soñada vista al mar, y poco a poco se transformó en algo hermoso.<br><br>
-                        Aquí cada persona que nos visita nos ha dejado experiencias increíbles, anécdotas únicas y recuerdos inolvidables, pues el entorno natural, los contrastes pintorescos y la ubicación alejada de todo hacen que disfrutes cada segundo.<br><br>
-                        Creamos un espacio ideal para desconectarte en pareja, familia o entre amigos, donde disfrutarás de habitaciones acogedoras y el mejor ambiente de relajación para apreciar los hermosos amaneceres y atardeceres.</h1>    
-                    <img src="images/logos/LogoSoloTexto_Desktop.png" style="padding-bottom: 1rem;" alt="">
+                        Todas nuestras habitaciones cuentan con el espacio y caracteristicas para hacer de tu visita la mas comoda y agradable.<br><br>
+                    </h1>
+                    <div class="row">
+                        <div class="col">
+                            <a href="HabSS.html"><button class="styledbuttonHAB">STANDARD SENCILLA</button></a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><button class="styledbuttonHAB activo">STANDARD DOBLE</button></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <a href="HabJSS.html"><button class="styledbuttonHAB">JUNIOR SUITE SENCILLA</button></a>
+                        </div>
+                        <div class="col">
+                            <a href="HabJSD.html"><button class="styledbuttonHAB">JUNIOR SUITE DOBLE</button></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <figure>
+                            <img class="caracteristica mg-r" src="images/logos/Iconos/Carateristicas Español/wifi_spa.png" alt="">
+                        </figure>
+                        </div>
+                        <div class="col">
+                            <figure>
+                            <img class="caracteristicaw mg-r" src="images/logos/Iconos/Carateristicas Español/cama doble_spa.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure>
+                            <img class="caracteristica mg-r" src="images/logos/Iconos/Carateristicas Español/baño_spa.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure>
+                            <img class="caracteristica mg-r" src="images/logos/Iconos/Carateristicas Español/smartv_spa.png" alt="">
+                            </figure>
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="col">
+                            <figure>
+                                <img class="caracteristica mg-r" src="images/logos/Iconos/Carateristicas Español/aire_spa.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure>
+                            <img class="caracteristica mg-r" src="images/logos/Iconos/Carateristicas Español/kitchen_spa.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure>
+                            <img class="caracteristica mg-r" src="images/logos/Iconos/Carateristicas Español/caja_spa.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure>
+                            <img class="caracteristica mg-r" src="images/logos/Iconos/Carateristicas Español/terraza_spa.png" alt="">
+                            </figure>
+                        </div>
+                    </div><br>
+                    <br>
                     <div>
                         <a href="https://hotels.cloudbeds.com/es/reservation/gv21lh?currency=mxn&utm_source=google&utm_medium=fbl&utm_campaign=cloudbeds&utm_term=3525131-gh3-92&checkin=2024-09-14&checkout=2024-09-15&adults=2&kids=0&rid=342053"><button class="styledbutton mgbtn" onclick="functionReserva()">RESERVAR AHORA</button></a>
                     </div>
@@ -329,7 +444,7 @@
         </div>
         <div class="idiom">
             <button class="styledbutton" style="color: #FFF; background-color: black; border-color: transparent;">ESP</button>
-            <a href="AboutUs.html"><button class="styledbuttonNav">ENG</button></a>
+            <a href="RoomSD.html"><button class="styledbuttonNav">ENG</button></a>
         </div>
         <div class="social">
             <button class="socialButtons"><img src="images/logos/fb normal2.png" alt="" onclick="facebook()"></button>
@@ -347,6 +462,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+
     <script>
         function instagram(){
         window.open('https://www.instagram.com/vistalaribera/');

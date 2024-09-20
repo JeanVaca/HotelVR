@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+  
     <link rel="icon" href="images/logos/LogoColorSoloIcono_Desktop.png" type="image/x-icon"/>
     <title>Hotel Vista la Ribera</title>
     
@@ -35,19 +35,21 @@
         text-align: center;
         background-color: #FFF;
         }
-        .navbar-toggler,
-        .navbar-brand {
-        z-index: 1;
-        }
         .navbar-brand {
         font-size: 1.8em;
         }
         .navbar-toggler{
-            color: black;
+            color: white;
             font-size: 1.5em;
             border-color: #fff;
             border-width: 3px;
             border-radius: 15px 15px 15px 15px;
+        }
+        .navbar-toggler:hover{
+            background-color: #FFF;
+        }
+        .navbar-toggler:hover .navbar-toggler-icon{
+            filter: invert(1);
         }
         .navbar-toggler:focus {
         box-shadow: none;
@@ -57,12 +59,18 @@
         letter-spacing: 2.5px;
         color: black;
         }
-        .navbar-collapse .nav-link:hover,
-        .navbar-collapse .nav-link.active {
+        .navbar-collapse .nav-link:hover{
             border: solid;
             border-radius: 15px 15px 15px 15px;
             border-color: black;
             color: black;
+        }
+        .navbar-collapse .nav-link.active {
+            border: solid;
+            border-radius: 15px 15px 15px 15px;
+            border-color: black;
+            background-color: black;
+            color: #FFF;
         }
         .nav-item:not(:last-child) {
         padding: 0.2em 4em;
@@ -80,15 +88,30 @@
             top:1.3rem;
             right:1.2rem;
             color: #FFF;
+            z-index: 3;
         }
         .btnClose{
             margin-top: 1px;
             margin-right: 2px;
             position:absolute;
-            top:1.5rem;
-            right:2.5rem;
+            top:1rem;
+            right:.8rem;
             background-color: transparent;
-            border: none;
+            border-color: black;
+            border: solid;
+            box-shadow: none;
+            border-radius: 15px 15px 15px 15px;
+            width: 9rem;
+            height: 3rem;
+            z-index: 2;
+        }
+        .btnClose:hover{
+            background-color: black;
+            color: #FFF;
+            border-color: black;
+        }
+        .btnClose:hover img{
+            filter: invert(1);
         }
         .idiom{
             z-index: 1;
@@ -104,28 +127,48 @@
             margin-right: 2px;
             position:absolute;
             top:9rem;
-            right:2rem;
+            right:1.5rem;
+        }
+        .socialButtons:hover{
+            border-radius: 10px 10px 10px 10px;
+            background-color: black;
+            filter: invert(1);
         }
         .socialButtonsNavbar{
+            height: 50px;
             background-color: #FFF;
             border: none;
         }
+        .socialButtonsNavbar:hover{
+            filter: invert(1);
+            background-color: white;
+            border-radius: 10px 10px 10px 10px;
+        }
         .socialButtons{
+            height: 50px;
             background-color: transparent;
             border: none;
         }
 
         html, body {
-            font-family: "Maven Pro", sans-serif;
+            font-family: "Kanit", sans-serif;        
             overflow-y: hidden; 
             overflow-x: hidden; 
-        }
-        .carousel {
-            bottom: 7rem;
         }
         .carousel-indicators {
             padding-bottom: 30px;
             height: 10px;
+        }
+        .carousel-control-prev { 
+            left: -40px !important;
+        }
+        .carousel-control-next { 
+            right: -40px !important; 
+        }
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            width: 2vw;
+            height: 2vw;
         }
         .indicatorRounded {
             
@@ -170,6 +213,21 @@
             color: black;
             border-color: transparent;
         }
+        .styledbuttonNav{
+            padding: .5rem;
+            font-size: large;
+            font-weight:bold;
+            color: black;
+            border-color: black;
+            border: solid;
+            background-color: transparent;
+            border-radius: 15px 15px 15px 15px;
+        }
+        .styledbuttonNav:hover{
+            background-color: black;
+            color: #FFF;
+            border-color: black;
+        }
 
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
@@ -185,7 +243,7 @@
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler collapsed" id="menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="margin-right: 1.9rem; margin-top: .5rem; width: 65px; position: relative;"></span>
+                <span class="navbar-toggler-icon" style="margin-right: 1.9rem; margin-top: .5rem; width: 65px; position: relative;"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENÚ</h4></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -199,12 +257,12 @@
                         <a class="nav-link" href="Nosotros.html">SOBRE NOSOTROS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Actividades.html">ACTIVIDADES CERCANAS</a>
+                        <a class="nav-link " href="Actividades.html">ACTIVIDADES CERCANAS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Habitaciones.html">HABITACIONES</a>
+                        <a class="nav-link" href="HabSS.html">HABITACIONES</a>
                     </li>
-                    <li class="nav-item"></li>
+                    <li class="nav-item">
                         <a class="nav-link" href="Amenidades.html">AMENIDADES</a>
                     </li>
                     <li class="nav-item">
@@ -213,15 +271,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Contacto.html">CONTACTO</a>
                     </li>
+                    <br>
                 </ul>
-                <button data-bs-toggle="collapse" data-bs-target="#navbarNav" class="btnClose"><img src="images/logos/x.png" alt=""></button>
+                <button data-bs-toggle="collapse" data-bs-target="#navbarNav" class="btnClose"><h4><img src="images/logos/x.png" alt=""> CERRAR</h4></button>
                 <div class="idiom">
-            <button class="styledbutton" style="color: #FFF; background-color: black; border-color: transparent;">ESP</button>
-            <button class="styledbutton" style="color: black; background-color: white; border-color: black;">ENG</button>
+            <button class="styledbuttonNav" style="color: white; background-color: black; border-color: black;">ESP</button>
+            <a href="Home.html"><button class="styledbuttonNav">ENG</button></a>
         </div>
                 <div class="social">
-                    <button class="socialButtons"><img src="images/logos/f.png" alt="" onclick="facebook()"></button>
-                    <button class="socialButtons"><img src="images/logos/i.png" alt="" onclick="instagram()"></button>
+                    <button class="socialButtonsNavbar"><img src="images/logos/fb normal2.png" alt="" onclick="facebook()"></button>
+                    <button class="socialButtonsNavbar"><img src="images/logos/ig normal2.png" alt="" onclick="instagram()"></button>
                 </div>
             </div>
         </div>
@@ -270,15 +329,15 @@
           </div>
 
         <div class="txtMenu">
-            <h4>MENÚ</h4>
+            <h4></h4>
         </div>
         <div class="idiom">
-            <button class="styledbutton" style="color: black; background-color: #FFF; border-color: transparent;">ESP</button>
-            <button class="styledbutton">ENG</button>
+            <button class="styledbutton" style="color: black; background-color: #FFF; border-color: #FFF;">ESP</button>
+            <a href="Home.html"><button class="styledbutton">ENG</button></a>
         </div>
         <div class="social">
-            <button class="socialButtons"><img src="images/logos/fw.png" alt="" onclick="facebook()"></button>
-            <button class="socialButtons"><img src="images/logos/iw.png" alt="" onclick="instagram()"></button>
+            <button class="socialButtons"><img src="images/logos/fb normal.png" alt="" onclick="facebook()"></button>
+            <button class="socialButtons"><img src="images/logos/ig normal.png" alt="" onclick="instagram()"></button>
         </div>
         <div class="logo">
             <img src="images/logos/LogoBlancoCompleto_Desktop.png" alt="">

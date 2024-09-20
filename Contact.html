@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="icon" href="images/logos/LogoColorSoloIcono_Desktop.png" type="image/x-icon"/>
-    <title>Sobre Nosotros</title>
+    <title>Contact</title>
     
     <style>   
         .hero-section {
@@ -214,12 +214,15 @@
             color: #FFF;
             border-color: transparent;
         }
-        
         .imgNos{
+            width: 90%;
             height: 100vh;
         }
         .center {
         text-align: left;
+        } 
+        .mgbtn{
+            padding: .7rem 1rem .7rem 1rem;
         } 
         .containerCentered {
             position: relative;
@@ -235,14 +238,37 @@
             font-size: large;
             padding-bottom: 1rem;
         }
+        .caracteristica{
+            width: 40px;
+            height: 50px;
+        }
+        .caracteristicaw{
+            width: 60px;
+            height: 50px;
+        }
+        .mg-r{
+            margin-right: 2rem;
+        }
+        h3{
+            font-size: small;
+        }
+        .captionr{
+            position: fixed;
+            padding-left: 2rem;
+        }
+        .captionxr{
+            position: fixed;
+            padding-left: 1rem;
+        }
+        .captionl{
+            position: fixed;
+            padding-right: 2rem;
+        }
         .tit{
             font-size: 18px;
         }
         .desc{
             font-weight: 200;
-        }
-        .mgbtn{
-            padding: .7rem 1rem .7rem 1rem;
         }
 
         @media screen and (min-width: 768px) {
@@ -259,7 +285,7 @@
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler collapsed" id="menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="margin-right: 1.9rem; margin-top: .5rem; width: 65px; position: relative;"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENÚ</h4></span>
+                <span class="navbar-toggler-icon" style="margin-right: 1.9rem; margin-top: .5rem; width: 65px; position: relative;"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENU</h4></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -267,32 +293,32 @@
                         <img src="images/logos/LogoColorSoloIcono_Desktop.png" alt="">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">INICIO</a>
+                        <a class="nav-link " href="Home.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">SOBRE NOSOTROS</a>
+                        <a class="nav-link" href="AboutUs.html">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="Actividades.html">ACTIVIDADES CERCANAS</a>
+                        <a class="nav-link " href="Experiences.html">EXPERIENCES AROUND US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="HabSS.html">HABITACIONES</a>
+                        <a class="nav-link" href="RoomSS.html">ROOMS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Amenidades.html">AMENIDADES</a>
+                        <a class="nav-link " href="Amenities.html">AMENITIES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Restaurante.html">RESTAURANTE</a>
+                        <a class="nav-link" href="Restaurant.html">RESTAURANT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Contacto.html">CONTACTO</a>
+                        <a class="nav-link active" aria-current="page" href="#">CONTACT</a>
                     </li>
                     <br>
                 </ul>
-                <button data-bs-toggle="collapse" data-bs-target="#navbarNav" class="btnClose"><h4><img src="images/logos/x.png" alt=""> CERRAR</h4></button>
+                <button data-bs-toggle="collapse" data-bs-target="#navbarNav" class="btnClose"><h4><img src="images/logos/x.png" alt=""> CLOSE</h4></button>
                 <div class="idiom">
-            <button class="styledbuttonNav" style="color: white; background-color: black; border-color: black;">ESP</button>
-            <a href="AboutUs.html"><button class="styledbuttonNav">ENG</button></a>
+            <a href="Contacto.html"><button class="styledbuttonNav">ESP</button></a>
+            <button class="styledbuttonNav" style="color: white; background-color: black; border-color: black;">ENG</button>
         </div>
                 <div class="social">
                     <button class="socialButtonsNavbar"><img src="images/logos/fb normal2.png" alt="" onclick="facebook()"></button>
@@ -303,33 +329,46 @@
     </nav>
 
     <div class="hero-section">
-        <div class="container-fluid">
+        <div class="container-fluid"></div>
             <div class="row">
               <div class="center col">
-                <img class="imgNos" src="images/fotosD/DesktopNosotros.png" alt="">
-              </div>
+                <iframe class="imgNos" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10047.718005149989!2d-109.57012943501468!3d23.586455680905775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86af7fd3e6a9878b%3A0x299bb6ee60959ded!2sHotel%20y%20Restaurante%20Caba%C3%B1as%20Vista%20la%20Ribera!5e0!3m2!1ses-419!2smx!4v1726220955960!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
               <div class="containerCentered col">
                 <div class="child">
                     <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="">
                     <h1 class="desc">
-                        Este mágico lugar nació como un proyecto familiar, un lindo rincón entre las colinas con nuestra soñada vista al mar, y poco a poco se transformó en algo hermoso.<br><br>
-                        Aquí cada persona que nos visita nos ha dejado experiencias increíbles, anécdotas únicas y recuerdos inolvidables, pues el entorno natural, los contrastes pintorescos y la ubicación alejada de todo hacen que disfrutes cada segundo.<br><br>
-                        Creamos un espacio ideal para desconectarte en pareja, familia o entre amigos, donde disfrutarás de habitaciones acogedoras y el mejor ambiente de relajación para apreciar los hermosos amaneceres y atardeceres.</h1>    
-                    <img src="images/logos/LogoSoloTexto_Desktop.png" style="padding-bottom: 1rem;" alt="">
+                        We hope to see you soon so you can enjoy your vacation with us.<br><br>
+                    </h1>
                     <div>
-                        <a href="https://hotels.cloudbeds.com/es/reservation/gv21lh?currency=mxn&utm_source=google&utm_medium=fbl&utm_campaign=cloudbeds&utm_term=3525131-gh3-92&checkin=2024-09-14&checkout=2024-09-15&adults=2&kids=0&rid=342053"><button class="styledbutton mgbtn" onclick="functionReserva()">RESERVAR AHORA</button></a>
-                    </div>
+                        <img class="caracteristicaw" src="images/logos/Iconos/ubicacion.png" alt="">
+                    </div><br>
+                    <h1 class="desc">
+                        <b>Parque Nacional Cabo Pulmo, Camino Cabo Este Km. 13.5, 23570 La Ribera, Baja California Sur</b><br><br>
+                    </h1>
+                    <div>
+                        <img class="caracteristica" src="images/logos/Iconos/phone.png" alt="">
+                    </div><br>
+                    <h1 class="desc">
+                        <b>+52 624 161 2834</b><br><br>
+                    </h1> 
+                    <div>
+                        <img class="caracteristica" src="images/logos/Iconos/mail.png" alt="">
+                    </div><br>
+                    <h1 class="desc">
+                        <b>hotbouvistalaribera@gmail.com</b><br>
+                    </h1> 
                 </div>
               </div>
             </div>
         </div>
 
         <div class="txtMenu">
-            <h4></h4>
+            <h4>MENÚ</h4>
         </div>
         <div class="idiom">
-            <button class="styledbutton" style="color: #FFF; background-color: black; border-color: transparent;">ESP</button>
-            <a href="AboutUs.html"><button class="styledbuttonNav">ENG</button></a>
+            <a href="Contacto.html"><button class="styledbutton">ESP</button></a>
+            <button class="styledbutton" style="color: #FFF; background-color: black; border-color: transparent;">ENG</button>
         </div>
         <div class="social">
             <button class="socialButtons"><img src="images/logos/fb normal2.png" alt="" onclick="facebook()"></button>

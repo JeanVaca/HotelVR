@@ -35,10 +35,6 @@
         text-align: center;
         background-color: #FFF;
         }
-        .navbar-toggler,
-        .navbar-brand {
-        z-index: 1;
-        }
         .navbar-brand {
         font-size: 1.8em;
         }
@@ -49,6 +45,12 @@
             border-width: 3px;
             border-radius: 15px 15px 15px 15px;
         }
+        .navbar-toggler:hover{
+            background-color: black;
+        }
+        .navbar-toggler:hover .navbar-toggler-icon{
+            filter: invert(1);
+        }
         .navbar-toggler:focus {
         box-shadow: none;
         }
@@ -57,12 +59,18 @@
         letter-spacing: 2.5px;
         color: black;
         }
-        .navbar-collapse .nav-link:hover,
-        .navbar-collapse .nav-link.active {
+        .navbar-collapse .nav-link:hover{
             border: solid;
             border-radius: 15px 15px 15px 15px;
             border-color: black;
             color: black;
+        }
+        .navbar-collapse .nav-link.active {
+            border: solid;
+            border-radius: 15px 15px 15px 15px;
+            border-color: black;
+            background-color: black;
+            color: #FFF;
         }
         .nav-item:not(:last-child) {
         padding: 0.2em 4em;
@@ -72,14 +80,6 @@
         }
         .navbar-toggler-icon{
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='10 -7 40 52'%3e%3cpath stroke='rgba%280, 0, 0%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-        .txtMenu{
-            margin-top: 1px;
-            margin-right: 2px;
-            position:absolute;
-            top:1.3rem;
-            right:1.2rem;
-            color: black;
         }
         .coverNavbar{
             z-index: 1;
@@ -93,16 +93,6 @@
             width: 200px;
             height: 100px;
         }
-        .btnClose{
-            z-index: 2;
-            margin-top: 1px;
-            margin-right: 2px;
-            position:absolute;
-            top:1.5rem;
-            right:2.5rem;
-            background-color: transparent;
-            border: none;
-        }
         .idiom{
             z-index: 1;
             margin-top: 1px;
@@ -111,24 +101,85 @@
             top:5rem;
             right:.9rem;
         }
+        .txtMenu{
+            margin-top: 1px;
+            margin-right: 2px;
+            position:absolute;
+            top:1.3rem;
+            right:1.2rem;
+            color: #FFF;
+            z-index: 3;
+        }
+        .btnClose{
+            margin-top: 1px;
+            margin-right: 2px;
+            position:absolute;
+            top:1rem;
+            right:.8rem;
+            background-color: transparent;
+            border-color: black;
+            border: solid;
+            box-shadow: none;
+            border-radius: 15px 15px 15px 15px;
+            width: 9rem;
+            height: 3rem;
+            z-index: 2;
+            background-color: #FFF;
+        }
+        .btnClose:hover{
+            background-color: black;
+            color: #FFF;
+            border-color: black;
+        }
+        .btnClose:hover img{
+            filter: invert(1);
+        }
+        
         .social{
             z-index: 1;
             margin-top: 1px;
             margin-right: 2px;
             position:absolute;
             top:9rem;
-            right:2rem;
+            right:1.5rem;
+        }
+        .socialButtons:hover{
+            border-radius: 10px 10px 10px 10px;
+            background-color: white;
+            filter: invert(1);
         }
         .socialButtonsNavbar{
+            height: 50px;
             background-color: #FFF;
             border: none;
         }
+        .socialButtonsNavbar:hover{
+            filter: invert(1);
+            background-color: white;
+            border-radius: 10px 10px 10px 10px;
+        }
         .socialButtons{
+            height: 50px;
             background-color: transparent;
             border: none;
         }
+        .styledbuttonNav{
+            padding: .5rem;
+            font-size: large;
+            font-weight:bold;
+            color: black;
+            border-color: black;
+            border: solid;
+            background-color: transparent;
+            border-radius: 15px 15px 15px 15px;
+        }
+        .styledbuttonNav:hover{
+            background-color: black;
+            color: #FFF;
+            border-color: black;
+        }
         html, body {
-            font-family: "Maven Pro", sans-serif;
+            font-family: "Kanit", sans-serif;        
         }
         .logo{
         height: 100vh;
@@ -167,10 +218,11 @@
             height: 100vh;
         }
         .center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: left;
         } 
+        .mgbtn{
+            padding: .7rem 1rem .7rem 1rem;
+        }
         .containerCentered {
             position: relative;
             text-align: center;
@@ -206,7 +258,7 @@
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler collapsed" id="menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="margin-right: 1.9rem; margin-top: .5rem; width: 65px; position: relative;"></span>
+                <span class="navbar-toggler-icon" style="margin-right: 1.9rem; margin-top: .5rem; width: 65px; position: relative;"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENÚ</h4></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -217,15 +269,15 @@
                         <a class="nav-link" href="index.html">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Nosotros.html">SOBRE NOSOTROS</a>
+                        <a class="nav-link " href="Nosotros.html">SOBRE NOSOTROS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="Actividades.html">ACTIVIDADES CERCANAS</a>
+                        <a class="nav-link active" aria-current="page" href="#">ACTIVIDADES CERCANAS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Habitaciones.html">HABITACIONES</a>
+                        <a class="nav-link" href="HabSS.html">HABITACIONES</a>
                     </li>
-                    <li class="nav-item"></li>
+                    <li class="nav-item">
                         <a class="nav-link" href="Amenidades.html">AMENIDADES</a>
                     </li>
                     <li class="nav-item">
@@ -234,64 +286,65 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Contacto.html">CONTACTO</a>
                     </li>
+                    <br>
                 </ul>
-                <div class="coverNavbar"></div>
-                <button data-bs-toggle="collapse" data-bs-target="#navbarNav" class="btnClose"><img src="images/logos/x.png" alt=""></button>
+                <button data-bs-toggle="collapse" data-bs-target="#navbarNav" class="btnClose"><h4><img src="images/logos/x.png" alt=""> CERRAR</h4></button>
                 <div class="idiom">
-            <button class="styledbutton" style="color: #FFF; background-color: black; border-color: transparent;">ESP</button>
-            <button class="styledbutton" style="color: black; background-color: white; border-color: black;">ENG</button>
+            <button class="styledbuttonNav" style="color: white; background-color: black; border-color: black;">ESP</button>
+            <a href="Experiences.html"><button class="styledbuttonNav">ENG</button></a>
         </div>
                 <div class="social">
-                    <button class="socialButtons"><img src="images/logos/f.png" alt="" onclick="facebook()"></button>
-                    <button class="socialButtons"><img src="images/logos/i.png" alt="" onclick="instagram()"></button>
-            </div>
+                    <button class="socialButtonsNavbar"><img src="images/logos/fb normal2.png" alt="" onclick="facebook()"></button>
+                    <button class="socialButtonsNavbar"><img src="images/logos/ig normal2.png" alt="" onclick="instagram()"></button>
+                </div>
             </div>
         </div>
     </nav>
+
 
     <div class="hero-section">
         <div class="container-fluid"></div>
             <div class="row">
               <div class="center col">
-                    <img class="imgNos" src="images/fotosD/DesktopActividades_03.png" alt="">
+                    <img class="imgNos" src="images/fotosD/actividades fusion.png" alt="">
               </div>
               <div class="containerCentered col">
                 <div class="child">
                     <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="">
                     <h1 class="desc">
-                        A nuestro alrededor tenemos los mejores paisajes,<br>donde podrás realizar actividades increíbles,<br>brindadas por expertos de la localidad.<br><br>
-                        Vive experiencias inolvidables como:<br><br>
+                        A nuestro alrededor tenemos los mejores paisajes, donde podrás realizar actividades increíbles, brindadas por expertos de la localidad.<br><br>
+                        Vive experiencias inolvidables como:<br>
                     </h1>
                     <h1 class="tit">
                         <b>TOURS GUIADOS EN ATV O RAZERS</b><br>
                     </h1>
                     <h1 class="desc">
-                        Disponible para grupos grandes o pequeños<br>que incluyen la visita a lugares que solo<br>los expertos conocen, como Cascadas de Santiago,<br>Bahia de los Suenos, Cabo Pulmo y más.<br>
+                        Disponible para grupos grandes o pequeños que incluyen la visita a lugares que solo los expertos conocen, como Cascadas de Santiago, Bahia de los Suenos, Cabo Pulmo y más.
                     </h1>
                     <div>
-                        <h1><img src="images/logos/p.png" alt=""><b>+52 624 242 2315</b></h1><br>
+                        <h1><img src="images/logos/p.png" alt=""><b>+52 624 242 2315</b></h1>
                     </div>  
                     <h1 class="tit">
                         <b>SNORKEL Y BUCEO EN CABO PULMO</b><br>
                     </h1>
                     <h1 class="desc">
-                        Incluye todo el equipo necesario.<br>
+                        Incluye todo el equipo necesario.
                     </h1>
                     <div>
-                        <h1><img src="images/logos/p.png" alt=""><b>+52 624 117 4257</b></h1><br>
+                        <h1><img src="images/logos/p.png" alt=""><b>+52 624 117 4257</b></h1>
                     </div>
                     <h1 class="tit">
                         <b>SESIONES Y RENTA PARA REALIZAR KITE SURFING</b><br>
                     </h1>
                     <h1 class="desc">
-                        Clases para principiantes y avanzados.<br>
+                        Clases para principiantes y avanzados.
                     </h1> 
                     <div>
-                        <h1><img src="images/logos/p.png" alt=""><b>+52 624 166 0986</b></h1><br><br>
+                        <h1><img src="images/logos/p.png" alt=""><b>+52 624 166 0986</b></h1><br>
                     </div>  
                     <h1 class="tit"><b>!Y AÚN MÁS POR DESCUBRIR!</b></h1>
                     <div>
-                        <a href="https://hotels.cloudbeds.com/es/reservation/gv21lh?currency=mxn&utm_source=google&utm_medium=fbl&utm_campaign=cloudbeds&utm_term=3525131-gh3-92&checkin=2024-09-14&checkout=2024-09-15&adults=2&kids=0&rid=342053"><button class="styledbutton" onclick="functionReserva()">RESERVAR AHORA</button></a>
+                        <a href="https://hotels.cloudbeds.com/es/reservation/gv21lh?currency=mxn&utm_source=google&utm_medium=fbl&utm_campaign=cloudbeds&utm_term=3525131-gh3-92&checkin=2024-09-14&checkout=2024-09-15&adults=2&kids=0&rid=342053"><button class="styledbutton mgbtn" onclick="functionReserva()">RESERVAR AHORA</button></a>
                     </div>
                 </div>
               </div>
@@ -299,15 +352,15 @@
         </div>
 
         <div class="txtMenu">
-            <h4>MENÚ</h4>
+            <h4></h4>
         </div>
         <div class="idiom">
             <button class="styledbutton" style="color: #FFF; background-color: black; border-color: transparent;">ESP</button>
-            <button class="styledbutton">ENG</button>
+            <a href="Experiences.html"><button class="styledbuttonNav">ENG</button></a>
         </div>
         <div class="social">
-            <button class="socialButtons"><img src="images/logos/f.png" alt="" onclick="facebook()"></button>
-            <button class="socialButtons"><img src="images/logos/i.png" alt="" onclick="instagram()"></button>
+            <button class="socialButtons"><img src="images/logos/fb normal2.png" alt="" onclick="facebook()"></button>
+            <button class="socialButtons"><img src="images/logos/ig normal2.png" alt="" onclick="instagram()"></button>
         </div>
     </div>
 
