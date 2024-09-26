@@ -244,10 +244,97 @@
         .mgbtn{
             padding: .7rem 1rem .7rem 1rem;
         }
+        .btnMenu{
+            margin-right: 1.9rem; 
+            margin-top: .5rem; 
+            width: 65px; 
+            position: relative;
+        }
+        .btnClose img{
+            padding-bottom: .3rem;
+        }
+        .bgimg{
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('images/fotosD/DesktopNosotros.png');
+        }
 
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
             padding: 0.5em 8em;
+        }
+        }
+
+        @media screen and (max-width: 768px) {
+            body{
+                height: 1000px;
+                overflow-x: scroll;
+            }
+            .navbar-toggler{
+                font-size: 1em;
+                border-width: 3px;
+                z-index: 2;
+            }
+            .navbar-toggler-icon{
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='5' height='5' viewBox='18 -16 40 70'%3e%3cpath stroke='rgba%280, 0, 0%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            }
+            .navbar-collapse .nav-link{
+                font-size: 1em;
+                letter-spacing: 1px;
+            }
+            .nav-item:not(:last-child) {
+                padding: 0.5em 8em;
+            }
+            .btnMenu{
+                margin-right: 1.4rem; 
+                margin-top: .2rem; 
+                width: 65px; 
+                position: relative;
+            }
+            .btnMenu h4{
+                position: absolute;
+                top: -10%;
+            }
+            .btnClose{
+                top: .5rem;
+                right: .5rem;
+                width: 8rem;
+                height: 2.5rem;
+            }
+            .idiom{
+                top: 3.5rem;
+                right: .7rem;
+            }
+            .social{
+                top: 6.8rem;
+                right: 1.2rem;
+            }
+            .nav-item img{
+                width: 200px;
+            }
+            .row{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .bgimg{
+            height: 350px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            background-image: url('images/fotosM/MobileNosotros.png');
+        }
+        .containerCentered{
+            top: 23rem;
+        }
+        .hero-section{
+            height: 1200px;
+        }
+        .child img{
+            width: 200px;
+        }
+        .desc{
+            font-size:medium;
         }
         }
         
@@ -259,8 +346,8 @@
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler collapsed" id="menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="margin-right: 1.9rem; margin-top: .5rem; width: 65px; position: relative;"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENÚ</h4></span>
-            </button>
+                <span class="navbar-toggler-icon btnMenu"><h4 class="pdbtn1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENÚ</h4></span> 
+           </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -305,8 +392,7 @@
     <div class="hero-section">
         <div class="container-fluid">
             <div class="row">
-              <div class="center col">
-                <img class="imgNos" src="images/fotosD/DesktopNosotros.png" alt="">
+              <div class="center col bgimg">
               </div>
               <div class="containerCentered col">
                 <div class="child">
