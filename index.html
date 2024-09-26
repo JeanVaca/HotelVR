@@ -256,12 +256,6 @@
             .carousel-indicators{
                 opacity: 0;
             }
-            .carousel-control-prev{
-                opacity: 0;
-            }
-            .carousel-control-next{
-                opacity: 0;
-            }
             .carousel-item img {
                 height: 100vh;
                 width: fit-content;
@@ -317,8 +311,8 @@
             width: 200px;
         }
         .logo img{
-            width: 300px;
-            height: 140px;
+            width: 250px;
+            height: 120px;
         }
         .btnReservar{
             position:absolute; 
@@ -326,6 +320,17 @@
             left:50%;
             width:200px;
             bottom:4.2rem;
+        }
+        .carousel-control-prev { 
+            left: -10px !important;
+        }
+        .carousel-control-next { 
+            right: -10px !important; 
+        }
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            width: 5vw;
+            height: 5vw;
         }
         }
         
@@ -437,9 +442,9 @@
         <div class="logo">
             <img src="images/logos/LogoBlancoCompleto_Desktop.png" alt="">
         </div>
-        <div class="btnReservar">
-            <button class="styledbutton" onclick="resevar()">RESERVAR AHORA</button>
-        </div>
+            <div class="btnReservar">
+                <button class="styledbutton" onclick="resevar()">RESERVAR AHORA</button>
+            </div>        
     </div>
 </div>
 
