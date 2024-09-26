@@ -193,7 +193,7 @@
         }
         .btnReservar{
             position:absolute; 
-            margin-left:-4rem;
+            margin-left:-50px;
             left:50%;
             width:200px;
             bottom:3.2rem;
@@ -248,14 +248,21 @@
             .carousel-indicators{
                 opacity: 0;
             }
+            .carousel-control-prev{
+                opacity: 0;
+            }
+            .carousel-control-next{
+                opacity: 0;
+            }
             .carousel-item img {
                 height: 100vh;
-                width: 100vh;
+                width: fit-content;
+                object-fit: cover;
             }
         .carousel{
             position: absolute;
             bottom: 0;
-            right: -75%;
+            right: 0;
         }
         .navbar-toggler{
             font-size: 1em;
@@ -302,7 +309,13 @@
             width: 300px;
             height: 140px;
         }
-
+        .btnReservar{
+            position:absolute; 
+            margin-left:-85px;
+            left:50%;
+            width:200px;
+            bottom:3.2rem;
+        }
         }
         
     </style>
