@@ -152,8 +152,10 @@
 
         html, body {
             font-family: "Kanit", sans-serif;        
-            overflow-y: hidden; 
-            overflow-x: hidden; 
+            width: 100%!important;
+            overflow-x: hidden!important;
+            overflow-y: hidden!important;
+
         }
         .carousel-indicators {
             padding-bottom: 30px;
@@ -245,10 +247,12 @@
         }
 
         @media screen and (max-width: 768px) {
-            html, body {
-            overflow-x:hidden;
-            overflow-y: hidden;
-            } 
+            .tlf{
+                position: absolute;
+            }
+            .navbar-toggler{
+                margin-right: .1rem;
+            }
             .carousel-indicators{
                 opacity: 0;
             }
@@ -302,10 +306,13 @@
             top: 3.5rem;
             right: .7rem;
         }
-        .social{
-            top: 6.8rem;
-            right: 1.2rem;
-        }
+        .socialButtonsNavbar{
+                background-color: transparent;
+            }
+            .social{
+                top: 6.8rem;
+                right: .6rem;
+            }
         .nav-item img{
             width: 200px;
         }
@@ -325,6 +332,7 @@
     </style>
   </head>
   <body>
+    <div class="fixed-top">
     <nav class="navbar fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"></a>
@@ -433,6 +441,7 @@
             <button class="styledbutton" onclick="resevar()">RESERVAR AHORA</button>
         </div>
     </div>
+</div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
