@@ -285,7 +285,11 @@
             height: 100vh;
             background-repeat: no-repeat;
             background-size: contain;
-            background-image: url('images/fotosD/restaurante\ fusion.png');
+            background-image: url('images/Desktop/restaurante\ fusion.webp');
+        }
+        .logot img{
+            width: 55px;
+            height: 75px;
         }
 
         @media screen and (min-width: 768px) {
@@ -348,12 +352,16 @@
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
             }
+            .row2{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
             .bgimg{
             height: 350px;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: bottom;
-            background-image: url('images/fotosM/restaurante\ fusion.png');
+            background-image: url('images/Mobile/restaurante\ fusion.webp');
         }
         .containerCentered{
             top: 26rem;
@@ -369,6 +377,7 @@
         }
         .logot img{
             width: 55px;
+            height: 75px;
         }
         .captionr{
             position: fixed;
@@ -378,10 +387,6 @@
             position: fixed;
             padding-left: 4.5rem;
         }
-        .row3{
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-            }
         .pdtop{
             margin-top: 20px;
         }
@@ -451,23 +456,20 @@
                     <h1 class="tit">
                         <b>Ask for our seasonal menu!</b><br>
                     </h1>
-                    <div class="row">
+                    <div class="row row2 pdtop">
                         <div class="col logot">
                             <figure>
-                                <img class="caracteristica" src="images/logos/Iconos/comida.png" alt="">
-                                <figcaption class="captionr gray">Lunch</figcaption>
+                                <img class="caracteristica" src="images/logos/Iconos/lunch.png" alt="">
                             </figure>
                         </div>
-                        <div class="col logot pdtop">
+                        <div class="col logot">
                             <figure>
-                            <img class="caracteristica" src="images/logos/Iconos/cena.png" alt="">
-                            <figcaption class="captionr gray">Dinner</figcaption>
+                            <img class="caracteristica" src="images/logos/Iconos/dinner.png" alt="">
                             </figure>
                         </div>
-                        <div class="col logot pdtop">
+                        <div class="col logot">
                             <figure>
-                            <img class="caracteristica" src="images/logos/Iconos/cocteles.png" alt="">
-                            <figcaption class="captionxr gray" style="padding-right: 1rem;">Mixology</figcaption>
+                            <img class="caracteristica" src="images/logos/Iconos/mixology.png" alt="">
                             </figure>
                         </div>
                     </div><br> 
