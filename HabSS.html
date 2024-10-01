@@ -304,11 +304,25 @@
         .btnClose img{
             padding-bottom: .3rem;
         }
-        .bgimg{
+        .carousel-control-prev{
+            position: absolute;
+            left: -1rem;
+        }
+        .carousel-control-next{
+            position: absolute;
+            right: 3.5rem;
+        }
+        .bgimg1{
             height: 100vh;
             background-repeat: no-repeat;
-            background-size: contain;
-            background-image: url('images/Desktop/estandar\ sencilla\ fusion.webp');
+            background-position: bottom left;
+            background-image: url('images/Desktop2/DesktopHabitacionTipoA_01.png');
+        }
+        .bgimg2{
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-image: url('images/Desktop2/DesktopHabitacionTipoA_02.png');
         }
 
         @media screen and (min-width: 768px) {
@@ -377,10 +391,6 @@
             }
             .bgimg{
             height: 350px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom;
-            background-image: url('images/Mobile/estandar\ sencilla\ fusion.webp');
         }
         .containerCentered{
             top: 33rem;
@@ -403,6 +413,36 @@
         .pdtop{
             margin-top: 20px;
         }
+        .child{
+            width: 85%;
+        }
+        .carrimg{
+            height: 300px;
+            width: 100%;
+        }
+        .carousel-control-prev{
+            position: absolute;
+            bottom: 5rem;
+            left: .5rem;
+        }
+        .carousel-control-next{
+            position: absolute;
+            right: .5rem;
+            bottom: 5rem;
+        }
+        .bgimg1{
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top left;
+            background-image: url('images/Desktop2/mobiletipoA1.png');
+        }
+        .bgimg2{
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top left;
+            background-image: url('images/Desktop2/mobiletipoA2.png');
+        }
+
         }
         
     </style>
@@ -458,7 +498,23 @@
     <div class="hero-section">
         <div class="container-fluid"></div>
             <div class="row">
-                <div class="center col bgimg">
+                <div class="center col carrimg">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active bgimg1">
+                          </div>
+                          <div class="carousel-item bgimg2">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" style="background-image: url('images/logos/back.png'); filter: invert(1);"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true" style="background-image: url('images/logos/next.png'); filter: invert(1);"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
                 </div>
               <div class="containerCentered col">
                 <div class="child">
