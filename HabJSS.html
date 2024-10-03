@@ -304,11 +304,42 @@
         .btnClose img{
             padding-bottom: .3rem;
         }
-        .bgimg{
+        
+        .carousel-control-prev{
+            position: absolute;
+            left: -1rem;
+        }
+        .carousel-control-next{
+            position: absolute;
+            right: 10rem;
+        }
+        .bgimg1{
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: contain;
+            background-image: url('images/Desktop/DesktopHabitacionTipoC_01.webp');
+        }
+        .bgimg2{
             height: 100vh;
             background-repeat: no-repeat;
             background-size: contain;
-            background-image: url('images/Desktop/junior\ suite\ sencilla\ fusion.webp');
+            background-position: bottom left;
+            background-image: url('images/Desktop/DesktopHabitacionTipoC_02.webp');
+        }
+        .bgimg3{
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: contain;
+            background-image: url('images/Desktop/DesktopHabitacionTipoC_03.webp');
+        }
+        .bgimg4{
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom left;
+            background-image: url('images/Desktop/DesktopHabitacionTipoC_04.webp');
         }
 
         @media screen and (min-width: 768px) {
@@ -375,12 +406,43 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
             }
-            .bgimg{
-            height: 350px;
+        .carrimg{
+            height: 300px;
+            width: 100%;
+        }
+        .carousel-control-prev{
+            position: absolute;
+            bottom: 9rem;
+            left: .5rem;
+        }
+        .carousel-control-next{
+            position: absolute;
+            right: .5rem;
+            bottom: 9rem;
+        }
+        .bgimg1{
             background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom;
-            background-image: url('images/Mobile/junior\ sencilla\ fusion.webp');
+            background-size: contain;
+            background-position: top left;
+            background-image: url('images/Mobile/MobileHabitacionTipoC_01.webp');
+        }
+        .bgimg2{
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top left;
+            background-image: url('images/Mobile/MobileHabitacionTipoC_02.webp');
+        }
+        .bgimg3{
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top left;
+            background-image: url('images/Mobile/MobileHabitacionTipoC_03.webp');
+        }
+        .bgimg4{
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top left;
+            background-image: url('images/Mobile/MobileHabitacionTipoC_04.webp');
         }
         .containerCentered{
             top: 33rem;
@@ -461,7 +523,27 @@
     <div class="hero-section">
         <div class="container-fluid"></div>
             <div class="row">
-                <div class="center col bgimg">
+                <div class="center col carrimg">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active bgimg1">
+                          </div>
+                          <div class="carousel-item bgimg2">
+                          </div>
+                          <div class="carousel-item bgimg3">
+                          </div>
+                          <div class="carousel-item bgimg4">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" style="background-image: url('images/logos/back.png'); filter: invert(1);"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true" style="background-image: url('images/logos/next.png'); filter: invert(1);"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
                 </div>
               <div class="containerCentered col">
                 <div class="child">
