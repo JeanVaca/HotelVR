@@ -17,6 +17,9 @@
     <title>Rooms</title>
     
     <style>   
+        .logoinfo{
+            display: none;
+        }   
         .hero-section {
         background-color: #FFF;
         background-size: cover;
@@ -352,7 +355,12 @@
                 height: 1000px;
                 overflow-x: scroll;
             }
+            .styledbutton{
+                background-color: #FFF;
+            }
             .navbar-toggler{
+                transform: scale(0.8);
+                background-color: #FFF;
                 font-size: 1em;
                 border-width: 3px;
                 z-index: 2;
@@ -378,21 +386,24 @@
                 top: -10%;
             }
             .btnClose{
+                transform: scale(0.8, 0.85);
                 top: .5rem;
-                right: .5rem;
+                right: .2rem;
                 width: 8rem;
                 height: 2.5rem;
             }
             .idiom{
-                top: 3.5rem;
+                transform: scale(0.7);
+                top: 2.5rem;
                 right: .7rem;
             }
             .socialButtonsNavbar{
                 background-color: transparent;
             }
             .social{
-                top: 6.8rem;
-                right: .6rem;
+                transform: scale(0.7);
+                top: 4.7rem;
+                right: 1.2rem;
             }
             .nav-item img{
                 width: 200px;
@@ -405,19 +416,19 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
             }
-        .carrimg{
-            height: 300px;
+            .carrimg{
+            height: 260px;
             width: 100%;
         }
         .carousel-control-prev{
             position: absolute;
-            bottom: 9rem;
+            bottom: 12rem;
             left: .5rem;
         }
         .carousel-control-next{
             position: absolute;
             right: .5rem;
-            bottom: 9rem;
+            bottom: 12rem;
         }
         .bgimg1{
             background-repeat: no-repeat;
@@ -547,7 +558,7 @@
                 </div>
               <div class="containerCentered col">
                 <div class="child">
-                    <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="">
+                    <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="" class="logoinfo">
                     <h1 class="desc">
                         All our rooms have the space and features to make your visit as comfortable and pleasant as possible.<br><br>
                     </h1>
