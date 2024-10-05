@@ -349,13 +349,18 @@
             height: 65px;
         }
 
-        @media screen and (max-width: 2560px) and (min-width: 2500px) {
+
+        @media screen and (min-width: 1500px) and (max-width: 1800px) {
+            .carousel-control-prev{
+                position: absolute;
+                left: 1vw;
+            }   
             .carousel-control-next{
                 position: absolute;
-                right: 5vw;
+                right: 2vw;
             }
         }
-
+        
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
             padding: 0.5em 8em;
