@@ -346,16 +346,17 @@
             background-image: url('images/Desktop/DesktopHabitacionTipoC_04.webp');
         }
 
-@media screen and (min-width: 1500px) and (max-width: 1900px) {
-    .carousel-control-prev{
-        position: absolute;
-        left: 1vw;
-    }   
-    .carousel-control-next{
-        position: absolute;
-        right: 2vw;
-    }
-}
+
+        @media screen and (min-width: 1300px) and (max-width: 1900px) {
+            .carousel-control-prev{
+                position: absolute;
+                left: 1vw;
+            }   
+            .carousel-control-next{
+                position: absolute;
+                right: 2vw;
+            }
+        }
 
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
@@ -644,7 +645,7 @@
                     </div><br>
                     <br>
                     <div>
-                        <a href="https://hotels.cloudbeds.com/es/reservation/gv21lh?currency=mxn&utm_source=google&utm_medium=fbl&utm_campaign=cloudbeds&utm_term=3525131-gh3-92&checkin=2024-09-14&checkout=2024-09-15&adults=2&kids=0&rid=342053"><button class="styledbutton mgbtn" onclick="functionReserva()">RESERVAR AHORA</button></a>
+                        <button class="styledbutton mgbtn" onclick="functionReserva()">RESERVAR AHORA</button>
                     </div>
                 </div>
               </div>
@@ -682,7 +683,7 @@
         function facebook(){
         window.open('https://www.facebook.com/vistalaribera/');
         }
-        function resevar(){
+        function functionReserva(){
         window.open('https://hotels.cloudbeds.com/es/reservation/gv21lh?currency=mxn&utm_source=google&utm_medium=fbl&utm_campaign=cloudbeds&utm_term=3525131-gh3-92&checkin=2024-09-14&checkout=2024-09-15&adults=2&kids=0&rid=342053');
         }
     </script>
