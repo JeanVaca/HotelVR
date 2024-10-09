@@ -265,6 +265,67 @@
             background-image: url('images/Desktop/Nosotros.webp');
         }
 
+        @media screen and (min-width: 1400px) and (max-width: 1900px) {
+            .logoinfo{
+                transform: scale(0.9);
+            }
+            .ovr{
+                overflow-y: scroll;
+            }
+            .desc{
+                font-size: 14px;
+            }
+            .reserv{
+                transform: scale(0.8);
+            }
+            .navbar-toggler{
+                transform: scale(0.9);
+            }
+            .btnClose{
+                transform: scale(0.9);
+            }
+            .social{
+                transform: scale(0.9);
+                top:7rem;
+            }
+            .idiom{
+                transform: scale(0.9);
+                top:4.1rem;
+            }
+            .tit{
+                font-size: 15px;
+            }
+            .logot h1{
+                font-size: 15px;
+            }
+            .logot img{
+                width: 13px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) and (max-width: 1399px) {
+            .ovr{
+              transform: scale(0.75);  
+            }
+            .child{
+                width: 71%;
+            }
+            .navbar-toggler{
+                transform: scale(0.9);
+            }
+            .btnClose{
+                transform: scale(0.9);
+            }
+            .social{
+                transform: scale(0.9);
+                top:6.8rem;
+            }
+            .idiom{
+                transform: scale(0.9);
+                top:4rem;
+            }
+        }
+
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
             padding: 0.5em 8em;
@@ -416,7 +477,7 @@
             <div class="row">
               <div class="center col bgimg">
               </div>
-              <div class="containerCentered col">
+              <div class="containerCentered col ovr">
                 <div class="child">
                     <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="">
                     <h1 class="desc">
@@ -424,7 +485,7 @@
                         Aquí cada persona que nos visita nos ha dejado experiencias increíbles, anécdotas únicas y recuerdos inolvidables, pues el entorno natural, los contrastes pintorescos y la ubicación alejada de todo hacen que disfrutes cada segundo.<br><br>
                         Creamos un espacio ideal para desconectarte en pareja, familia o entre amigos, donde disfrutarás de habitaciones acogedoras y el mejor ambiente de relajación para apreciar los hermosos amaneceres y atardeceres.</h1>    
                     <img src="images/logos/LogoSoloTexto_Desktop.png" style="padding-bottom: 1rem;" alt="">
-                    <div>
+                    <div class="reserv">
                         <button class="styledbutton mgbtn" onclick="functionReserva()">RESERVAR AHORA</button>
                     </div>
                 </div>

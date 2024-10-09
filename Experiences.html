@@ -289,15 +289,64 @@
             margin-left: 1rem;
         }
 
-        @media screen and (min-width: 1000px) and (max-width: 1900px) {
+        @media screen and (min-width: 1400px) and (max-width: 1900px) {
+            .logoinfo{
+                transform: scale(0.9);
+            }
             .ovr{
                 overflow-y: scroll;
             }
             .desc{
-                font-size: 16px;
+                font-size: 14px;
             }
             .reserv{
+                transform: scale(0.8);
+            }
+            .navbar-toggler{
                 transform: scale(0.9);
+            }
+            .btnClose{
+                transform: scale(0.9);
+            }
+            .social{
+                transform: scale(0.9);
+                top:7rem;
+            }
+            .idiom{
+                transform: scale(0.9);
+                top:4.1rem;
+            }
+            .tit{
+                font-size: 15px;
+            }
+            .logot h1{
+                font-size: 15px;
+            }
+            .logot img{
+                width: 13px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) and (max-width: 1399px) {
+            .ovr{
+              transform: scale(0.75);  
+            }
+            .child{
+                width: 71%;
+            }
+            .navbar-toggler{
+                transform: scale(0.9);
+            }
+            .btnClose{
+                transform: scale(0.9);
+            }
+            .social{
+                transform: scale(0.9);
+                top:6.8rem;
+            }
+            .idiom{
+                transform: scale(0.9);
+                top:4rem;
             }
         }
 
@@ -548,10 +597,10 @@
                         For beginners and advanced.
                     </h1> 
                     <div class="logot">
-                        <h1><img src="images/logos/p.png" alt=""><b>+52 624 166 0986</b></h1><br>
+                        <h1><img src="images/logos/p.png" alt=""><b>+52 624 166 0986</b></h1>
                     </div>  
                     <h1 class="tit"><b>And even more to discover!</b></h1>
-                    <div>
+                    <div class="reserv">
                         <button class="styledbutton mgbtn" onclick="functionReserva()">Book now</button>
                     </div>
                 </div>

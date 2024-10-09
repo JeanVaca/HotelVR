@@ -341,14 +341,63 @@
             height: 65px;
         }
 
-@media screen and (min-width: 1000px) and (max-width: 1900px) {
-    .ovr{
-        overflow-y: scroll;
-    }
-    .child{
-        width: 85%;
-    }
-}
+        @media screen and (min-width: 1400px) and (max-width: 1900px) {
+            .logoinfo{
+                transform: scale(0.9);
+            }
+            .ovr{
+                overflow-y: scroll;
+            }
+            .desc{
+                font-size: 14px;
+            }
+            .reserv{
+                transform: scale(0.8);
+            }
+            .navbar-toggler{
+                transform: scale(0.9);
+            }
+            .btnClose{
+                transform: scale(0.9);
+            }
+            .social{
+                transform: scale(0.9);
+                top:7rem;
+            }
+            .idiom{
+                transform: scale(0.9);
+                top:4.1rem;
+            }
+            .tit{
+                font-size: 15px;
+            }
+            .child{
+                width: 65%;
+            }
+        }
+
+        @media screen and (min-width: 1200px) and (max-width: 1399px) {
+            .ovr{
+              transform: scale(0.75);  
+            }
+            .child{
+                width: 71%;
+            }
+            .navbar-toggler{
+                transform: scale(0.9);
+            }
+            .btnClose{
+                transform: scale(0.9);
+            }
+            .social{
+                transform: scale(0.9);
+                top:6.8rem;
+            }
+            .idiom{
+                transform: scale(0.9);
+                top:4rem;
+            }
+        }
 
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
@@ -568,7 +617,7 @@
                         </button>
                       </div>
                 </div>
-              <div class="containerCentered col">
+              <div class="containerCentered col ovr">
                 <div class="child">
                     <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="" class="logoinfo">
                     <h1 class="desc">
