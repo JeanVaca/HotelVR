@@ -257,47 +257,41 @@
         .btnClose img{
             padding-bottom: .3rem;
         }
-        .carousel-control-prev{
-            position: absolute;
-            left: -1rem;
-        }
-        .carousel-control-next{
-            position: absolute;
-            right: 8vw;
-        }
         .bgimg1{
             height: 100vh;
             background-repeat: no-repeat;
             background-position: bottom left;
-            background-size: contain;
-            background-image: url('images/Desktop/DesktopActividades_01.webp');
+            background-size: cover;
+            background-image: url('images/Desktop/Actividades_01.webp');
         }
         .bgimg2{
             height: 100vh;
             background-repeat: no-repeat;
             background-position: bottom left;
-            background-size: contain;
-            background-image: url('images/Desktop/DesktopActividades_02.webp');
+            background-size: cover;
+            background-image: url('images/Desktop/Actividades_02.webp');
         }
         .bgimg3{
             height: 100vh;
             background-repeat: no-repeat;
             background-position: bottom left;
-            background-size: contain;
-            background-image: url('images/Desktop/DesktopActividades_03.webp');
+            background-size: cover;
+            background-image: url('images/Desktop/Actividades_03.webp');
+        }
+        .bgimg4{
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: cover;
+            background-image: url('images/Desktop/Actividades_04.webp');
         }
         .pdtlf{
             margin-left: 1rem;
         }
 
-        @media screen and (min-width: 1300px) and (max-width: 1900px) {
-            .carousel-control-prev{
-                position: absolute;
-                left: 1vw;
-            }   
-            .carousel-control-next{
-                position: absolute;
-                right: 3vw;
+        @media screen and (min-width: 1000px) and (max-width: 1900px) {
+            .ovr{
+                overflow-y: scroll;
             }
             .desc{
                 font-size: 16px;
@@ -306,7 +300,7 @@
                 transform: scale(0.9);
             }
         }
-        
+
         @media screen and (min-width: 768px) {
         .nav-item:not(:last-child) {
             padding: 0.5em 8em;
@@ -412,13 +406,13 @@
         }
         .carousel-control-prev{
             position: absolute;
-            bottom: 12rem;
+            bottom: 15rem;
             left: .5rem;
         }
         .carousel-control-next{
             position: absolute;
             right: .5rem;
-            bottom: 12rem;
+            bottom: 15rem;
         }
         .bgimg1{
             background-repeat: no-repeat;
@@ -502,6 +496,8 @@
                           </div>
                           <div class="carousel-item bgimg3">
                         </div>
+                        <div class="carousel-item bgimg4">
+                        </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true" style="background-image: url('images/logos/back.png'); filter: invert(1);"></span>
@@ -513,7 +509,7 @@
                         </button>
                       </div>
                 </div>
-              <div class="containerCentered col">
+              <div class="containerCentered col ovr">
                 <div class="child">
                     <img src="images/logos/LogoColorSoloIcono_Desktop.png" style="padding-bottom: 1rem;" alt="" class="logoinfo">
                     <h1 class="desc">
